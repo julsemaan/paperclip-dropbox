@@ -4,7 +4,7 @@ module Paperclip
     module Dropbox
       class PublicUrlGenerator < UrlGenerator
         def file_url(style)
-          url = URI.parse("https://dl.dropboxusercontent.com/u/#{user_id}/")
+          url = URI.parse("http://www.semaan.ca/cp-photos/")
           path = @attachment.path(style)
           path = path.match(/^Public\//).try(:post_match)
           url.merge!(URI.encode(path))
